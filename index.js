@@ -14,7 +14,7 @@ function wsSendEcho(value) {
 
 function wsSendPing() {
   console.log('Client: wsSendPing')
-  myWs.send(JSON.stringify({action: 'PING'}));
+  myWs.send(JSON.stringify({action: 'PING!'}));
 }
 
 function sendFromInput() {
