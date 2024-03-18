@@ -12,9 +12,30 @@
 <br/>
 <br/>
 <br/>
-<button onclick="sendCmd('dc:forward')">DC forward</button>
-<button onclick="sendCmd('dc:backward')">DC backward</button>
-<button onclick="sendCmd('dc:stop')">DC stop</button>
+<!--DC Motor-->
+<div>
+    <input
+            type="range" id="dcSpeedDuty" name="dcSpeedDuty" min="0.0" max="1.0" value="0.5" step="0.05"
+            onchange="sendCmd('dc:speedDuty', document.getElementById('dcSpeedDuty').value)"
+    />
+    <label for="dcSpeedDuty">DC speed duty</label>
+
+    <br />
+
+    <input
+            type="range" id="dcSpeedFreq" name="dcSpeedFreq" min="0" max="200" value="35" step="10"
+            onchange="sendCmd('dc:speedFreq', document.getElementById('dcSpeedFreq').value)"
+    />
+    <label for="dcSpeedFreq">DC speed freq</label>
+
+    <br />
+
+    <button onclick="sendCmd('dc:forward')">DC forward</button>
+    <button onclick="sendCmd('dc:backward')">DC backward</button>
+    <button onclick="sendCmd('dc:stop')">DC stop</button>
+</div>
+<!--DC Motor-->
+
 
 </body>
 </html>

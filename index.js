@@ -22,7 +22,7 @@ function sendFromInput() {
   myWs.send(JSON.stringify({ cmd }));
 }
 
-function sendCmd(cmd) {
-  console.log('Client:', cmd);
-  myWs.send(JSON.stringify({ cmd }));
+function sendCmd(cmd, value) {
+  console.log('Client:', cmd, value);
+  myWs.send(JSON.stringify({ cmd, value }));
 }
